@@ -78,3 +78,49 @@
 .order--logo h2 {
   font-size: 3rem;
 }
+
+
+
+#pizza-form label input{
+  display: block;
+  font-size: 1.5rem;
+}
+
+#pizza-form label select{
+  display: block;
+  font-size: 1.5rem;
+}
+
+#pizza-form label label{
+  display: block;
+  font-size: 1.5rem;
+}
+#pizza-form label textarea{
+  display: block;
+  font-size: 1.5rem;
+}
+
+#pizza-form label{
+  font-size: 3rem;
+  margin: 2% 0;
+}
+
+.order-button--container {
+  margin: 2% 0;
+  display: flex;
+  justify-content: center;
+}
+
+#order-button {
+  padding: 1rem 3rem;
+  border: .2rem solid rgb(190, 187, 187);
+  border-radius: 2rem;
+  background-color: rgb(4, 173, 131);
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+#order-button:hover{
+  background-color: brown;
+}
