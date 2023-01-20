@@ -21,6 +21,7 @@ export default function Form(props){
                     <h2>Build Your Pizza</h2>
                     <img id="order--logoImg" src={PizzaLogo} alt="Big Pizza"/>
                     <form id="pizza-form" onSubmit={onSubmit}>
+                        <div>{errors.name}</div>
                         <label>Name
                             <input id="name-input" onChange={onChange} name="name" value={values.name} placeholder="Name"/>
                         </label>
