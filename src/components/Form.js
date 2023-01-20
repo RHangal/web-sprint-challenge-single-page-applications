@@ -2,7 +2,7 @@ import React from "react";
 import PizzaLogo from "../Images/Pizza.jpg"
 
 export default function Form(props){
-    const {values, change, disabled, errors} = props;
+    const {values, change, disabled, errors, submit} = props;
 
     const onChange = evt =>{
         const {name, value, checked, type} = evt.target;
@@ -10,13 +10,17 @@ export default function Form(props){
         change(name, valueToUse);
 } 
 
+    const onSubmit = evt => {
+        evt.preventDefault()
+        submit()
+}
     return(
         <section id="order--page">
             <div className="order--logo--container">
                 <div className="order--logo">
                     <h2>Build Your Pizza</h2>
                     <img id="order--logoImg" src={PizzaLogo} alt="Big Pizza"/>
-                    <form id="pizza-form">
+                    <form id="pizza-form" onSubmit={onSubmit}>
                         <label>Name
                             <input id="name-input" onChange={onChange} name="name" value={values.name} placeholder="Name"/>
                         </label>
@@ -31,16 +35,16 @@ export default function Form(props){
                         </label>
                         <label>Toppings
                             <label>Pepperoni
-                                <input type="checkbox"  onChange={onChange} name='pepperoni' value={values.pepperoni} />
+                                <input type="checkbox"  onChange={onChange} name='pepperoni' checked={values.pepperoni} />
                             </label>
                             <label>Ham
-                                <input type="checkbox"  onChange={onChange} name='ham' value={values.ham} />
+                                <input type="checkbox"  onChange={onChange} name='ham' checked={values.ham} />
                             </label>
                             <label>Mushrooms
-                                <input type="checkbox" onChange={onChange} name='mushrooms' value={values.mushrooms}/>
+                                <input type="checkbox" onChange={onChange} name='mushrooms' checked={values.mushrooms}/>
                             </label>
                             <label>Olives
-                                <input type="checkbox"  onChange={onChange} name='olives' value={values.olives}/>
+                                <input type="checkbox"  onChange={onChange} name='olives' checked={values.olives}/>
                             </label>
                         </label>
                         <label>Special Instructions
