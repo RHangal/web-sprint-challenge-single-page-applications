@@ -56,3 +56,25 @@
 #order-pizza:hover {
   background-color: brown;
 }
+
+.order--logo--container {
+  display: flex;
+  justify-content: center;
+}
+
+.order--logo{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: .5rem solid rgb(4, 173, 131);
+  border-radius: 1rem;
+}
+
+#order--logoImg {
+  width: 50rem;
+}
+
+.order--logo h2 {
+  font-size: 3rem;
+}
